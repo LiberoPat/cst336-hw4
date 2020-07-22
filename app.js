@@ -2,15 +2,24 @@ const express = require("express");
 const app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
-//const faker = require("faker");
+const faker = require("faker");
 
 //routes
 
-
+/*
 app.get("/", function(req,res){
     res.render("index.html");
    // someDate: faker.date.past();
 });
+*/
+
+app.get("/", function(req, res){
+    res.render('index.html', {
+        someDate: faker.date.past()
+    });
+
+});
+
 
 app.get("/manifesto", function(req,res){
     res.render("manifesto.html");
