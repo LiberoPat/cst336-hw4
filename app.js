@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
-const faker = require('Faker');
+const faker = require('faker');
+
 
 //routes
 
@@ -13,7 +14,7 @@ app.get("/", function(req,res){
 });
 */
 
-app.get("/", function(req, res){
+app.get("/index", function(req, res){
     res.render('index.ejs', {
         someDate: faker.date.past()
     });
