@@ -12,15 +12,15 @@ app.get("/", function(req,res){
 });
 
 app.get("/manifesto", function(req,res){
-    res.render("manifesto.html");
+     res.render("manifesto.ejs", {"someDate":faker.date.past()});
 });
 
 app.get("/principle", function(req,res){
-    res.render("principle.html");
+     res.render("principle.ejs", {"someDate":faker.date.past()});
 });
 
 app.get("/scrum", function(req,res){
-    res.render("scrum.html");
+     res.render("scrum.ejs", {"someDate":faker.date.past()});
 });
 
 
