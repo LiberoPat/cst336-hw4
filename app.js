@@ -9,7 +9,7 @@ var someDate = faker.date.past();
 
 
 app.get("/", function(req,res){
-    res.render("index.html");
+    res.render("index.ejs", {"someDate":faker.date.past()});
   
 });
 
