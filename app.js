@@ -7,20 +7,11 @@ const faker = require('faker');
 
 //routes
 
-/*
+
 app.get("/", function(req,res){
     res.render("index.html");
-   // someDate: faker.date.past();
+  
 });
-*/
-
-app.get("/index", function(req, res){
-    res.render('index.ejs', {
-        someDate: faker.date.past()
-    });
-
-});
-
 
 app.get("/manifesto", function(req,res){
     res.render("manifesto.html");
