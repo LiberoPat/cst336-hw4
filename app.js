@@ -6,14 +6,10 @@ const faker = require("faker");
 
 //routes
 
-app.get("/", function(req, res){
-    res.render('index.html', {currentPage: "/", 
-        someDate: faker.date.past(),
-
-});
 
 app.get("/", function(req,res){
     res.render("index.html");
+    someDate: faker.date.past();
 });
 
 app.get("/manifesto", function(req,res){
