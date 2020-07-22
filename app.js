@@ -3,7 +3,7 @@ const app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
 const faker = require('faker');
-
+var someDate = faker.date.past();
 
 //routes
 
