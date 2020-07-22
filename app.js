@@ -2,8 +2,16 @@ const express = require("express");
 const app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
+const faker = require("faker");
 
 //routes
+
+app.get("/", function(req, res){
+    res.render('index.ejs', {currentPage: "/", 
+        someDate: faker.date.past(),
+
+});
+
 app.get("/", function(req,res){
     res.render("index.html");
 });
