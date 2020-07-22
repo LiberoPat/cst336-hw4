@@ -23,9 +23,6 @@ app.get("/scrum", function(req,res){
     res.render("scrum.html");
 });
 
-app.get("/index", function(req,res){
-    res.render("index.html");
-});
 
 //starting server
 app.listen(process.env.PORT, process.env.IP, function(){
