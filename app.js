@@ -6,8 +6,6 @@ const faker = require('faker');
 var someDate = faker.date.past();
 
 //routes
-
-
 app.get("/", function(req,res){
     res.render("index.ejs", {"someDate":faker.date.past()});
   
